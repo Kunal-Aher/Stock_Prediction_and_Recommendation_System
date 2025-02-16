@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 ### 4️⃣ Run the Application  
 ```bash
-python app.py
+python App5.py
 ```
 ### 5️⃣ Access the Web App  
 - Open `http://127.0.0.1:5000` in your browser.
@@ -56,7 +56,8 @@ python app.py
 ## 📊 UI Preview  
 Below is a preview of the **Stock Prediction Dashboard**:
 
-![Stock Prediction System UI](assets/ui_screenshot.png)  
+![Screenshot 2025-02-10 223357](https://github.com/user-attachments/assets/b752a0cd-dfa6-489e-8fed-f0ccaaf18bfc)
+
 ![Screenshot 2025-02-10 223246](https://github.com/user-attachments/assets/2ce86513-ed9b-4510-9531-14bf275bae69)
 
 ![Screenshot 2025-02-13 225629](https://github.com/user-attachments/assets/2a48831b-8386-41a1-a83c-facfef1c3852)
