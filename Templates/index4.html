@@ -175,6 +175,7 @@
             box-shadow: 0 3px 7px rgba(0, 0, 0, 0.05);
             border: 1px solid #e9ecef; /* Very light border */
             color: #2c3e50;
+            display:flexbox;
         }
 
         .stock-info h2 {
@@ -508,6 +509,22 @@
                 <p><strong>SMA (Simple Moving Average):</strong> Shows the average price over a set period.</p>
                 <p><strong>EMA (Exponential Moving Average):</strong>A type of moving average that gives more weight to recent prices, making it more responsive to new information.</p>
             </div>
+            <p>{{ stock_info }}</p>
+                {% if aggregated_price %}
+                <p><b>Aggregated Predicted Price:</b> {{ aggregated_price }}</p>
+                {% endif %}
+                {% if recommendation %}
+                <p class="recommendation {% if 'BUY' in recommendation %}buy-recommendation{% elif 'SELL' in recommendation %}sell-recommendation{% elif 'HOLD' in recommendation %}hold-recommendation{% endif %}">
+                    <b>Recommendation:</b> {{ recommendation|safe }}
+                    {% if "BUY" in recommendation %}
+                    <i class="fas fa-thumbs-up"></i>
+                    {% elif "SELL" in recommendation %}
+                    <i class="fas fa-thumbs-down"></i>
+                    {% else %}
+                    <i class="fas fa-question"></i>
+                    {% endif %}
+                </p>
+                {% endif %}
         </div>
 
         <!-- Stock Info Container -->
@@ -528,6 +545,13 @@
                     <li><strong>Low:</strong> {{ info.get('low', 'N/A')}}</li>
                     <li><strong>Previous Close:</strong> {{ info.get('previousClose', 'N/A')}}</li>
                 </ul>
+                {% if candlestick_chart_html %}
+                <div class="chart">
+                    <h2>Candlestick Chart:</h2>
+                    {{ candlestick_chart_html | safe }}
+                </div>
+                {% endif %}
+        
                 <div class="dataframe-container">
                     {% if dataframe %}
                     <div class="dataframe">
@@ -543,7 +567,7 @@
                     </div>
                     {% endif %}
                 </div>
-                <p>{{ stock_info }}</p>
+                <!-- <p>{{ stock_info }}</p>
                 {% if aggregated_price %}
                 <p><b>Aggregated Predicted Price:</b> {{ aggregated_price }}</p>
                 {% endif %}
@@ -557,8 +581,8 @@
                     {% else %}
                     <i class="fas fa-question"></i>
                     {% endif %}
-                </p>
-                {% endif %}
+                </p> -->
+                <!-- {% endif %} -->
                 <!-- {% if base_stock %}
                 <div class="similar-stocks">
                     <h2>Similar Stocks to {{ base_stock }}</h2>
@@ -596,12 +620,12 @@
         </div>
 
         <!-- Charts and Dataframe -->
-        {% if candlestick_chart_html %}
+        <!-- {% if candlestick_chart_html %}
         <div class="chart">
             <h2>Candlestick Chart:</h2>
             {{ candlestick_chart_html | safe }}
         </div>
-        {% endif %}
+        {% endif %} -->
 
         {% if chart_html %}
         <div class="chart">

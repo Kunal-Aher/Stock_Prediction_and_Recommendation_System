@@ -71,7 +71,12 @@ class StockDataFetcher:
         stock = yf.Ticker(symbol)
         stock.info 
         data = stock.history(period=period)
-        info = stock.info
+        if symbol.startswith('^'):
+            info = stock.info
+            period = '1h'
+        else:
+            info = stock.info
+            period = period
 
 # Display relevant stock details
         print(f"Company Name: {info.get('longName', 'N/A')}")
@@ -122,6 +127,7 @@ class StockDataFetcher:
             return live_data
         if live_data.empty:
             return historical_data
+        
 
         combined_data = pd.concat([historical_data, live_data])
         combined_data = combined_data[~combined_data.index.duplicated(keep='first')]  

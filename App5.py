@@ -25,6 +25,7 @@ from flask import Flask, render_template, request,session
 import os
 
 
+
 app = Flask(__name__, template_folder="Templates",static_folder="static")
 app.secret_key = os.getenv("SECRET_KEY", os.urandom(24))
 
@@ -65,6 +66,7 @@ from main.StockAnalysis import StockAnalysis
 from main.StockDataFetcher import StockDataFetcher
 from main.StockModelTrainer import StockModelTrainer
 from main.StockVisualization import StockVisualization
+
 
 # class StockDataFetcher:
 #     def fetch_stock_data(self, symbol, period='10y'):
@@ -518,7 +520,19 @@ def index():
         # #Base Stock
         # base_stock = symbol
         # # print(Indicators.get_correlated_stocks(base_stock, stock_list))
+        
         # news_articles=fetcher.fetch_stock_news(symbol)
+
+        # if symbol.startswith('^'):
+        #     index_data = fetcher.fetch_live_data(symbol, api_key)
+        #     recommendation = IndexMarketRecommendation.recommend_index_action(index_data)
+        #     stock_info = f"Index Symbol: {symbol}"
+        #     print(recommendation)
+        # else:
+        #     recommendation = Indicators.recommend_stock_action(df)
+        #     print(recommendation)    
+
+
 
     return render_template('index4.html', stock_info=stock_info, chart_html=chart_html,
                            all_charts_html=all_charts_html,
