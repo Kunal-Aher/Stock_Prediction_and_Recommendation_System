@@ -1,7 +1,3 @@
-Here's an improved **README** with a section for adding a UI image:  
-
----
-
 # 📈 Stock Prediction and Recommendation System  
 
 ## 🔍 Overview  
@@ -79,6 +75,4 @@ Below is a preview of the **Stock Prediction Dashboard**:
 - **Nikhil Desai**  
 - **Vijay Chopade**  
 
----
 
-Let me know if you need further modifications! 🚀
