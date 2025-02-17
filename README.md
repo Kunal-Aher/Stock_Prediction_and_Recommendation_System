@@ -19,6 +19,10 @@ The project consists of the following components:
 4️⃣ **Model Training** – Utilizes **LSTM, GRU, XGBoost, and Random Forest** for prediction.  
 5️⃣ **Prediction & Recommendation Engine** – Analyzes stock movement trends and generates insights.  
 6️⃣ **Web Application** – Built using **Flask**, with **D3.js** for visualization.  
+![image](https://github.com/user-attachments/assets/3590d155-6f79-4b0b-9667-1ba7f4389db6)
+
+![WhatsApp Image 2025-02-10 at 23 52 11_e7ddd852](https://github.com/user-attachments/assets/d0fb8787-b653-4baa-a942-0632591933ef)
+
 
 ## 🛠 Tech Stack  
 - **Programming Language**: Python 🐍  
