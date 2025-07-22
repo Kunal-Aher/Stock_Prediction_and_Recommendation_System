@@ -67,7 +67,7 @@ Below is a preview of the **Stock Prediction Dashboard**:
 
 ## Working
        ┌──────────────────────────┐
-       │   Historical Stock Data  │
+       │   Live + Historical Stock Data  │
        └────────────┬─────────────┘
                     ↓
        ┌──────────────────────────┐
@@ -80,7 +80,7 @@ Below is a preview of the **Stock Prediction Dashboard**:
   │  Regressor     │   │  Regressor    │
   └────────────────┘   └───────────────┘
               ↓            ↓
-        Avg/Compare Models for tabular prediction
+Avg/Compare Models for tabular prediction
 
                      ↓
      ┌──────────────────────────────────┐
