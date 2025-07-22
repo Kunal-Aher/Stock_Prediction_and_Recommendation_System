@@ -65,6 +65,37 @@ Below is a preview of the **Stock Prediction Dashboard**:
 ![Screenshot 2025-02-10 223220](https://github.com/user-attachments/assets/01b8d848-3dbd-4a60-a1e5-7134c359345d)
 ![Screenshot 2025-02-10 223034](https://github.com/user-attachments/assets/2f78d029-cd64-4d89-8d91-50814f6b6cd6)
 
+## Working
+       ┌──────────────────────────┐
+       │   Historical Stock Data  │
+       └────────────┬─────────────┘
+                    ↓
+       ┌──────────────────────────┐
+       │   Feature Engineering    │
+       │  (SMA, EMA, RSI, MACD)   │
+       └──────┬────────────┬──────┘
+              ↓            ↓
+  ┌────────────────┐   ┌───────────────┐
+  │ Random Forest  │   │    XGBoost    │
+  │  Regressor     │   │  Regressor    │
+  └────────────────┘   └───────────────┘
+              ↓            ↓
+        Avg/Compare Models for tabular prediction
+
+                     ↓
+     ┌──────────────────────────────────┐
+     │  LSTM (Deep Learning for Time     │
+     │     Series Forecasting)          │
+     └──────────────────────────────────┘
+                     ↓
+       ┌─────────────────────────────┐
+       │  Buy / Sell / Hold Signal   │
+       └────────────┬────────────────┘
+                    ↓
+       ┌──────────────────────────┐
+       │ Flask Web App + Dashboard │
+       └──────────────────────────┘
+
 
 
 ## 📌 Future Enhancements  
